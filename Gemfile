@@ -53,6 +53,7 @@ gem 'devise-encryptable'
 gem 'formtastic', github: 'justinfrench/formtastic', branch: 'master'
 gem "friendly_id", '~> 5.0.0.alpha1', :github => "FriendlyId/friendly_id"
 gem 'haml'
+gem 'has_scope'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'kaminari'
 gem 'mini_magick'
