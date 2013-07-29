@@ -1,4 +1,5 @@
 .post
   - if post.title
-    .post_title= link_to raw(post.title), post
+    - unless local_assigns.has_key? :notitle
+      .post_title= link_to raw(post.title), post
   .description= raw post.description

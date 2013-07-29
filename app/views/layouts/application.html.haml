@@ -3,6 +3,9 @@
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %title= content_for?(:title) ? yield(:title) : "blindness"
+    %link{:href => "http://feeds.feedburner.com/blindness/", :rel => "alternate", :title => "Blindness feed", :type => "application/rss+xml"}/
+    %link{:href => "http://feeds2.feedburner.com/IcewhistleAll", :rel => "alternate", :title => "Icewhistle aggregate feed", :type => "application/rss+xml"}/
+    %link{:href => "http://feeds2.feedburner.com/Icewhistle", :rel => "alternate", :title => "Icewhistle feed", :type => "application/rss+xml"}/    
     %meta{:content => content_for?(:description) ? yield(:description) : "Supermarket", :name => "description"}
     %link{:href => "http://fonts.googleapis.com/css?family=Lato:400,700italic|Open+Sans:300italic,400,600,300&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}/
     = stylesheet_link_tag :application

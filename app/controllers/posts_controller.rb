@@ -1,5 +1,6 @@
 class PostsController < InheritedResources::Base
   has_scope :page, :default => 1
+  respond_to :html, :rss
   
   def filtered
     @posts = Post.where(['lower(title) = ?', params[:id]]).page(params[:page]).per(10)

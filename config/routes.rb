@@ -13,6 +13,8 @@ Blindness::Application.routes.draw do
       post :search
     end
   end
+    # map.rss '/rss', :controller => 'posts', :action => 'index', :format => :rss
+  get '/rss', to: 'posts#index', :defaults => { :format => :rss }
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

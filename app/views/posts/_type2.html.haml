@@ -1,6 +1,7 @@
 .post
   - if post.title
-    .title= link_to post.title, post
+    - unless local_assigns.has_key? :notitle
+      .title= link_to post.title, post
   
   -if post.url
     -if post.url =~ /^\.\.\/upload/
