@@ -1,0 +1,7 @@
+.quote
+  %big{:class => "quote"}
+    =link_to '“', post
+  
+  = raw post.description
+
+  .source= raw("&mdash;" + post.title)

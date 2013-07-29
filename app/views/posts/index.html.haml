@@ -1,0 +1,7 @@
+
+#posts.twelve.columns
+  - if @filtered
+    .filter_heading= raw@filtered
+  .page= render @posts
+  
+= paginate @posts

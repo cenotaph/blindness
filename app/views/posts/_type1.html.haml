@@ -1,0 +1,4 @@
+.post
+  - if post.title
+    .post_title= link_to raw(post.title), post
+  .description= raw post.description

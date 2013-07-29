@@ -1,0 +1,9 @@
+.post
+  -if post.title
+    .title= link_to post.title, post
+
+  - if post.localfile.blank?
+    .video-container
+      = figure_video_type(post)
+  - unless post.description.blank?
+    .description= raw post.description

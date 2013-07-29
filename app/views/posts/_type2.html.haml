@@ -1,0 +1,14 @@
+.post
+  - if post.title
+    .title= link_to post.title, post
+  
+  -if post.url
+    -if post.url =~ /^\.\.\/upload/
+      = image_tag post.url.sub(/^\.\.\//, '/'), :width => 500
+    -else
+      = image_tag post.url
+  -else
+    %center= image_tag post.localimage.url(:bigger)
+  
+  -if post.description
+    .description= raw post.description
