@@ -17,3 +17,6 @@ module CarrierWave
     end
   end
 end
+CarrierWave.configure do |config|
+  config.asset_host = "http://blindness.icewhistle.com/"
+end

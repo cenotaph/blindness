@@ -9,7 +9,7 @@
     -else
       = image_tag post.url
   -else
-    %center= image_tag post.localimage.url(:bigger)
+    = image_tag post.localimage.url(:bigger)
   
   -if post.description
     .description= raw post.description
