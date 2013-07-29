@@ -53,6 +53,10 @@ header {
   ul {
     li {
       margin-bottom: 2px;
+      span.small {
+        font-size: 11px;
+      }
+      
       a {
         text-decoration: none;
         font-style: italic;
@@ -97,7 +101,7 @@ nav.pagination {
     font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   
   .video-container {

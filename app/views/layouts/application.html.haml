@@ -45,8 +45,10 @@
         .infobox
           %h2 recurring
           %ul
-            - @recurring.each do |r|
-              %li= link_to r.first.upcase, filtered_post_path(r.first.to_param)
+            - @recurring.each do |r,v|
+              %li
+                = link_to r.upcase, filtered_post_path(r.to_param)
+                %span.small= "(#{v})"
         .infobox
           %h2 find
           = form_tag(search_posts_path) do |f|
