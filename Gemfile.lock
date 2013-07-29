@@ -107,6 +107,7 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -149,6 +150,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (2.3.0)
+    ref (1.0.5)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
     rinku (1.5.1)
@@ -172,6 +174,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     subexec (0.2.3)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -224,6 +229,7 @@ DEPENDENCIES
   sdoc
   skeleton-rails
   soundmanager2-rails
+  therubyracer
   thin
   truncate_html
   turbolinks
