@@ -26,10 +26,11 @@
             
           .thirteen.columns.omega
             %h1= link_to '.blindness.', '/'
-            - if current_user
-              = link_to 'add/edit', new_post_path
+    
           
       .three.columns.alpha.sidebar
+        - if current_user
+          .below= link_to 'add/edit', new_post_path
         .infobox
           %h2 about
           %p 

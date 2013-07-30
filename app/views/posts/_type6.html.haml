@@ -7,4 +7,4 @@
     .video-container
       = figure_video_type(post)
   - unless post.description.blank?
-    .description= raw post.description
+    .description= raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(post.description)

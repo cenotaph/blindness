@@ -1,15 +1,6 @@
-- datecollector = []
-- this_year = Time.now.strftime("%Y")
-.post
-  - if datecollector.include?(post.created_at.strftime("%d %B"))
-    .date
-  - else
-    .date
-      - if post.created_at.strftime("%Y") == this_year
-        = post.created_at.strftime("%d %B")
-      - else
-        = post.created_at.strftime("%d %B %Y")
-    - datecollector.push(post.created_at.strftime("%d %B"))
 
+
+.post
+  .date= the_date
   %div{:id => post.id, :class => post.mytype }
     = render :partial => 'type' + post.the_type.to_s, :locals => {:post => post }

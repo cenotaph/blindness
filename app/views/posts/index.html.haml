@@ -2,6 +2,19 @@
 #posts.twelve.columns
   - if @filtered
     .filter_heading= raw@filtered
-  .page= render @posts
+  .page
   
-= paginate @posts
+    - datecollector = []
+    - this_year = Time.now.strftime("%Y")
+
+    - @posts.each do |post|
+      - if datecollector.include?(post.created_at.strftime("%d %B"))
+        - the_date = ''
+      - else
+        - if post.created_at.strftime("%Y") == this_year
+          - the_date = post.created_at.strftime("%d %B")
+        - else
+          - the_date = post.created_at.strftime("%d %B %Y")
+        - datecollector.push(post.created_at.strftime("%d %B"))
+      = render :partial => 'post', :locals => {:post => post, :the_date => the_date}
+    = paginate @posts

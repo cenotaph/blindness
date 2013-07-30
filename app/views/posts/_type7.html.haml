@@ -11,4 +11,4 @@
       });
 
   - if post.description
-    .description= raw post.description
+    .description= raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(post.description)

@@ -2,4 +2,4 @@
   - if post.title
     - unless local_assigns.has_key? :notitle
       .post_title= link_to raw(post.title), post
-  .description= raw post.description
+  .description= raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(post.description)

@@ -1,0 +1,18 @@
+.cms
+  %nav.menu
+    %ul
+      %li= link_to 'post', new_post_path(:type => 'post')    
+      %li= link_to 'image', new_post_path(:type => 'image')
+      %li= link_to 'quote', new_post_path(:type => 'quote')
+      %li= link_to 'link', new_post_path(:type => 'link')
+      %li
+        %strong VIDEO
+      %li= link_to 'sound', new_post_path(:type => 'sound')
+
+  = semantic_form_for(@post, :html => {:multipart => true}) do |f|
+    = f.input :user_id, :as => :hidden, :value => current_user.id.to_s
+    = f.input :the_type, :as => :hidden, :value => 6
+    = f.input :url
+    = f.input :title, :as => :string, :label => "Caption/title"
+    = f.input :description, :label => "Description (optional)", :hint => "Markdown is OK"
+    = f.submit

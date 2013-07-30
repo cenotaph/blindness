@@ -2,6 +2,6 @@
   %big{:class => "quote"}
     =link_to '“', post
   
-  = raw post.description
+  = raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render( post.description)
 
   .source= raw("&mdash;" + post.title)
