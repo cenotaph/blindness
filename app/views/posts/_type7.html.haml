@@ -7,3 +7,7 @@
 
   - if post.description
     .description= raw post.description
+  :javascript
+    soundManager.onready(function() {
+      basicMP3Player = new BasicMP3Player();
+    });

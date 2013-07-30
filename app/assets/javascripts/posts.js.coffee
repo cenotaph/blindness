@@ -4,5 +4,3 @@ $(document).ready ->
     nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
     itemSelector: "#posts .post" # selector for all items you'll retrieve
 
-  soundManager.onready ->
-    basicMP3Player = new BasicMP3Player()
