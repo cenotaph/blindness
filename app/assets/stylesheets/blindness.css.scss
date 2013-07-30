@@ -20,6 +20,7 @@ header {
 }
 .yield {
   margin-top: -26px;
+  padding-bottom: 50px;
 }
 
 #flash_error {
@@ -79,6 +80,7 @@ header {
 }
 
 nav.pagination {
+  padding-top: 40px;
   clear: left;
 }
 
@@ -197,4 +199,34 @@ nav.pagination {
       }
     }
   }
+}
+
+footer {
+
+  .lined {
+    margin-top: 25px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #efefef;
+    height: 23px;
+  }
+  .inner {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font: 13px/15px 'Lato', Helvetica, Arial, sans-serif;
+    a:hover {
+      color: #9099CC;
+    };
+    .column {
+      float: left;
+      margin-right: 25px;
+    }
+  }
+  position: fixed;
+  left: 0px;
+
+  bottom: 0px;
+
+
 }
