@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   
   default_scope { order("created_at DESC")}
+  paginates_per 10
   
   extend FriendlyId
   friendly_id :name_and_type, use: :slugged
