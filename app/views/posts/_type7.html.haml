@@ -3,12 +3,7 @@
     - unless local_assigns.has_key? :notitle
       .title= link_to post.title, post
     = link_to post.localfile.url, post.localfile.url, :class => :sm2_button
-  - if post.localfile.blank?
-    = figure_sound_type(post)
-  - else
-    %p{:id => post.id.to_s + '_sound'} You need flash installed.
-    %script{:type => 'text/javascript'}
-      = 'AudioPlayer.embed("' + post.id.to_s + '_sound", {soundFile: "' + url_for_file_column(post, "localfile") + '"});'
+
 
   - if post.description
     .description= raw post.description

@@ -206,9 +206,10 @@ footer {
   .lined {
     margin-top: 25px;
     border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid black;
     background-color: #efefef;
     height: 23px;
+    padding-left: 10px;
   }
   .inner {
     text-align: center;
@@ -219,12 +220,15 @@ footer {
       color: #9099CC;
     };
     .column {
+      &.small {
+        font-size: 10px;
+      }
       float: left;
       margin-right: 25px;
     }
   }
   position: fixed;
-  left: 0px;
+  right: 0px;
 
   bottom: 0px;
 
