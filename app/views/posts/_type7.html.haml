@@ -2,6 +2,7 @@
   - if post.title
     - unless local_assigns.has_key? :notitle
       .title= link_to post.title, post
+    sdgsdg
     = link_to post.localfile.url, post.localfile.url, :class => :sm2_button
     :javascript
       $(document).ready(function() {
