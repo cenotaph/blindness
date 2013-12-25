@@ -11,7 +11,7 @@
         
   = semantic_form_for(@post, :html => {:multipart => true}) do |f|
     = f.input :user_id, :as => :hidden, :value => current_user.id.to_s
-    = f.input :the_type, :as => :hidden, :value => 6
+    = f.input :the_type, :as => :hidden, :value => 7
     = f.input :localfile, :label => "Mp3 to upload"
     = f.input :title, :as => :string, :label => "Caption/title"
     = f.input :description, :label => "Description (optional)", :hint => "Markdown is OK"
