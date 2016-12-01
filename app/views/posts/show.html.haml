@@ -1,6 +1,7 @@
-.date= @post.created_at.strftime("%d %B %Y")
+- cache @post do
+  .date= @post.created_at.strftime("%d %B %Y")
 
-%div{:id => @post.id, :class => @post.mytype }
-  #posts= render :partial => 'type' + @post.the_type.to_s, :locals => {:post => @post }
+  %div{:id => @post.id, :class => @post.mytype }
+    #posts= render :partial => 'type' + @post.the_type.to_s, :locals => {:post => @post }
 
-.return= link_to 'back to index', '/'
+  .return= link_to 'back to index', '/'

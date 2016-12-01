@@ -8,13 +8,14 @@
     - this_year = Time.now.strftime("%Y")
 
     - @posts.each do |post|
-      - if datecollector.include?(post.created_at.strftime("%d %B"))
-        - the_date = ''
-      - else
-        - if post.created_at.strftime("%Y") == this_year
-          - the_date = post.created_at.strftime("%d %B")
+      - cache post do
+        - if datecollector.include?(post.created_at.strftime("%d %B"))
+          - the_date = ''
         - else
-          - the_date = post.created_at.strftime("%d %B %Y")
-        - datecollector.push(post.created_at.strftime("%d %B"))
-      = render :partial => 'post', :locals => {:post => post, :the_date => the_date}
+          - if post.created_at.strftime("%Y") == this_year
+            - the_date = post.created_at.strftime("%d %B")
+          - else
+            - the_date = post.created_at.strftime("%d %B %Y")
+          - datecollector.push(post.created_at.strftime("%d %B"))
+        = render :partial => 'post', :locals => {:post => post, :the_date => the_date}
     = paginate @posts

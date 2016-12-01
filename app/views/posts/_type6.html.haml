@@ -5,6 +5,6 @@
 
   - if post.localfile.blank?
     .video-container
-      = figure_video_type(post)
+      = raw figure_video_type(post)
   - unless post.description.blank?
     .description= raw Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(post.description)
