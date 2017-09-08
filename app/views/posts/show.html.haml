@@ -5,3 +5,11 @@
     #posts= render :partial => 'type' + @post.the_type.to_s, :locals => {:post => @post }
 
   .return= link_to 'back to index', '/'
+ 
+- if user_signed_in? 
+  - if current_user
+    .below
+      = link_to 'edit', edit_post_path(@post)
+      %br/
+      = link_to 'destroy', @post, method: :delete, data: {confirm: 'are ye sure?'}
+    

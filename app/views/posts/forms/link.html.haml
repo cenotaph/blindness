@@ -10,8 +10,8 @@
       %li= link_to 'sound', new_post_path(:type => 'sound')
 
   = semantic_form_for(@post, :html => {:multipart => true}) do |f|
-    = f.input :user_id, :as => :hidden, :value => current_user.id.to_s
-    = f.input :the_type, :as => :hidden, :value => 4
+    = f.input :user_id, :as => :hidden,  input_html: {value: current_user.id.to_s}
+    = f.input :the_type, :as => :hidden, input_html: {value:  4 }
     = f.input :url
     = f.input :title, :as => :string, :label => "Caption/title"
     = f.input :description, :label => "Description (optional)", :hint => "Markdown is OK"

@@ -14,6 +14,14 @@ class PostsController < InheritedResources::Base
   end
   
 
+  def destroy
+    @post = Post.friendly.find(params[:id])
+    if @post.destroy
+      flash[:notice] = 'post destroyed'
+    end
+    redirect_to '/'
+  end
+  
   def new
     @post = Post.new
     if params[:type]
