@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   has_scope :page, :default => 1
   respond_to :html, :rss
-  before_filter :authenticate_user!, :only => [:create, :update, :new, :edit, :destroy]
+  before_action :authenticate_user!, :only => [:create, :update, :new, :edit, :destroy]
 
   def create
     @post = Post.new(post_params)
