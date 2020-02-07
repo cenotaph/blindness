@@ -5,7 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : "blindness"
     %link{:href => "http://feeds.feedburner.com/blindness/", :rel => "alternate", :title => "Blindness feed", :type => "application/rss+xml"}/
     %link{:href => "http://feeds2.feedburner.com/IcewhistleAll", :rel => "alternate", :title => "Icewhistle aggregate feed", :type => "application/rss+xml"}/
-    %link{:href => "http://feeds2.feedburner.com/Icewhistle", :rel => "alternate", :title => "Icewhistle feed", :type => "application/rss+xml"}/    
+    %link{:href => "http://feeds2.feedburner.com/Icewhistle", :rel => "alternate", :title => "Icewhistle feed", :type => "application/rss+xml"}/
     %meta{:content => content_for?(:description) ? yield(:description) : "Blindness", :name => "description"}
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:400,700italic|Open+Sans:300italic,400,600,300&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}/
     = stylesheet_link_tag :application
@@ -21,30 +21,31 @@
             - flash.each do |name, msg|
               - if msg.is_a?(String)
                 %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-                  %a.close{"data-dismiss" => "alert"} 
+                  %a.close{"data-dismiss" => "alert"}
                   = content_tag :div, msg, :id => "flash_#{name}"
-            
+
           .thirteen.columns.omega
             %h1= link_to '.blindness.', '/'
-    
-          
+
+
       .three.columns.alpha.sidebar
         - if current_user
           .below= link_to 'add/edit', new_post_path
         .infobox
           %h2 about
-          %p 
+          %p
             this is a quick miniblog to spit for
-            = link_to 'me', 'http://icewhistle.com/'
+            = link_to 'me', 'https://johnw.fail'
             to spit out quick images, text bleats, and other materials.
         .infobox
           %h2 connections
           %ul
-            %li= link_to 'temporary', 'https://temporary.fi'
-            %li= link_to 'personal site', 'http://johnw,fail'
-            %li= link_to 'pixelache', 'http://pixelache.ac'
-            %li= link_to 'ptarmigan', 'http://ptarmigan.ee/'
-            %li= link_to 'cenotaph', 'http://cenotaph.org/'
+            %li= link_to 'personal site', 'https://johnw.fail'
+            %li= link_to 'scarlatti tilt', 'https://scarlattitilt.com/'
+            %li= link_to 'serious introspection', 'https://seriousintrospection.fi'
+            %li= link_to 'kuusi palaa', 'https://kuusipalaa.fi'
+            %li= link_to 'ptarmigan', 'https://ptarmigan.ee/'
+            %li= link_to 'cenotaph', 'https://cenotaph.org/'
         .infobox
           %h2 recurring
           %ul
@@ -56,7 +57,7 @@
           %h2 find
           = form_tag(search_posts_path) do |f|
             = text_field_tag :searchterm
-            
+
       .thirteen.columns.omega.yield= yield
   %footer
     .lined
@@ -66,5 +67,5 @@
         .column
           = link_to '@hyksos', 'http://twitter.com/hyksos'
           ,
-          = link_to 'email', 'mailto:john ut ptarmigan punkt fi'
+          = link_to 'email', 'mailto:john , ptarmigan dawt fi'
         .column.small= link_to 'source', 'http://github.com/cenotaph/blindness'
