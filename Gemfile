@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.7.0'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.2.1'
+gem 'rails', '6.0.3.1'
 
 # Use mysql as the database for Active Record
+gem 'puma', '~> 5.0'
 gem 'mysql2'
 
 # Use SCSS for stylesheets
@@ -65,7 +66,6 @@ gem 'has_scope'
 # gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'kaminari'
 gem 'mini_magick'
-gem 'puma'
 gem 'redcarpet'
 gem 'redis-rails'#, '~> 5.0.1'
 gem 'redis'
