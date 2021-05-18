@@ -6,7 +6,7 @@ ruby '2.7.2'
 gem 'rails', '6.0.3.1'
 
 # Use mysql as the database for Active Record
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.3'
 gem 'mysql2'
 
 # Use SCSS for stylesheets
